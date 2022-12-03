@@ -55,8 +55,8 @@ public class Evento {
 
     @Override
     public String toString() {
-        return  nomeEvento + "[ nomeEst=" + nomeEst + ", descricao=" + descricao
-                + ", quantIngressos=" + quantIngressos + ", endereco=" + endereco + "]";
+        return  "\n"+nomeEst+ " | Evento : " + nomeEvento + "\nDescricao : " + descricao
+                + "\nNúmero de Ingressos : " + quantIngressos + "\nEndereço : " + endereco + "|";
     }
 
     

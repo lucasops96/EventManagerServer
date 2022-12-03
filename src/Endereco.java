@@ -72,7 +72,7 @@ public class Endereco {
 
     @Override
     public String toString() {
-        return "Endereço ["+" estado=" + estado + ", cidade=" + cidade + ",  bairro=" + bairro + ", rua="+ rua + ", numero=" + numero + "]";
+        return cidade +" - " + estado + "Bairro : " + bairro + " Rua : "+ rua + " Número : " + numero;
     }
 
     
