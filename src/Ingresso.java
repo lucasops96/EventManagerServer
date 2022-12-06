@@ -1,13 +1,20 @@
 import java.time.LocalDateTime;
 // import java.time.format.DateTimeFormatter;
+// import javax.swing.JOptionPane;
+// import java.util.ArrayList;
+// import static java.time.format.DateTimeFormatter.ofPattern;
+
 
 public class Ingresso {
     private int codigo;
+    private Evento evento;
     private LocalDateTime data;
     private float valorIngresso;
 
-    public Ingresso(int codigo, LocalDateTime data, float valorIngresso){
+
+    public Ingresso(int codigo,Evento evento, LocalDateTime data, float valorIngresso){
         this.codigo = codigo;
+        this.evento = evento;
         this.data = data;
         this.valorIngresso = valorIngresso;
     }
@@ -36,5 +43,19 @@ public class Ingresso {
         this.valorIngresso = valorIngresso;
     }
 
+    public Evento getEvento() {
+        return evento;
+    }
+
+    public void setEvento(Evento evento) {
+        this.evento = evento;
+    }
+
+    @Override
+    public String toString() {
+        return "\nIngresso - Código : " + codigo + "\nEvento : " + evento.getNomeEvento() + "\nData : " + data + "\n Valor Ingresso : R$ "+ valorIngresso +"";
+    }
+
+    
     
 }

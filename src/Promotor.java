@@ -43,7 +43,7 @@ public class Promotor extends Pessoa{
 
     @Override
     public String toString() {
-        return getNome()+" cnpj=" + cnpj + "\n"+ meusEventos;
+        return getNome()+" - CNPJ : " + cnpj + "\n"+ meusEventos;
     }
 
     

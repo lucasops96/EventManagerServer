@@ -6,8 +6,6 @@ public class App {
 
         Promotor p1 = new Promotor("Martins Filho","mfilho784@gmail.com" ,"8456561", "88985236410", "98765412354", new Endereco("PB", "Patos", "centro", "Rua portugal", 24));
 
-        Funcionalidades f = new Funcionalidades();
-
 
 
         int op = 0;
@@ -18,19 +16,19 @@ public class App {
 
             switch (op) {
                 case 1:
-                    f.cadastrarEvento(p1, new LerDados().criarEvento());
+                    p1.getMeusEventos().addEvento(new LerDados().criarEvento());
                     break;
 
                 case 2:                    
-                    f.atuaEvento(p1);
+                    p1.getMeusEventos().atualizarEvento(JOptionPane.showInputDialog(null,"Digite o nome do Evento que quer Atualizar : "));
                     break;
 
                 case 3:
-                    f.removerEvento(p1);
+                    p1.getMeusEventos().remover(JOptionPane.showInputDialog(null,"Digite o nome do Evento que quer Remover : "));
                     break;
 
                 case 4:
-                    f.imprimirEventos(p1);
+                    JOptionPane.showMessageDialog(null,"Meus Eventos  "+ p1);
                     break;
                 
                 case 8:
