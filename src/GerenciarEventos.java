@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-
+import java.time.LocalDateTime;
+import static java.time.format.DateTimeFormatter.ofPattern;
 
 public class GerenciarEventos {
     
@@ -19,16 +20,20 @@ public class GerenciarEventos {
         for(Evento evento : eventos){
             if(evento.getNomeEvento().equals(nomeEvento)){
                 String nomeEventoAtua = JOptionPane.showInputDialog(null,"Atualize o nome do Evento: ");
-                
                 evento.setNomeEvento(nomeEventoAtua);
                 
                 String descricao = JOptionPane.showInputDialog(null,"Atualize a descrição do Evento: ");
-                
                 evento.setDescricao(descricao);
                 
                 int quantIngressos = Integer.parseInt(JOptionPane.showInputDialog(null,"Atualize a quantidade de Ingressos: "));
-                
                 evento.setQuantIngressos(quantIngressos);
+
+                float valorEntrada = Float.parseFloat(JOptionPane.showInputDialog(null,"Digite o valor do Ingresso: "));
+                evento.setValorEntrada(valorEntrada);
+
+                String data = JOptionPane.showInputDialog(null,"Digite a data e hora: ");
+                LocalDateTime date = LocalDateTime.parse(data, ofPattern("dd/MM/yyyy HH:mm"));
+                evento.setData(date);
 
                 String estado = JOptionPane.showInputDialog(null,"Digite o estado: ");
                 String cidade = JOptionPane.showInputDialog(null,"Digite a cidade: ");

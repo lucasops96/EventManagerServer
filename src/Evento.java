@@ -76,8 +76,8 @@ public class Evento {
     
     @Override
     public String toString() {
-        return  "\n"+nomeEst+ " | Evento : " + nomeEvento + "\nDescricao : " + descricao
-                + "\nNúmero de Ingressos : " + quantIngressos +"\nValor do Ingresso: R$"+valorEntrada+ "\nEndereço : " + endereco + "|";
+        return  "\n"+nomeEst+ " | Evento : " + nomeEvento +"\nData : "+data+ "\nDescricao : " + descricao
+                + "\nNúmero de Ingressos : " + quantIngressos +"\nValor do Ingresso: R$"+valorEntrada+ "\nEndereço : " + endereco + "|\n\n";
     }
 
     

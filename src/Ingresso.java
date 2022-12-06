@@ -53,7 +53,7 @@ public class Ingresso {
 
     @Override
     public String toString() {
-        return "\nIngresso - Código : " + codigo + "\nEvento : " + evento.getNomeEvento() + "\nData : " + data + "\n Valor Ingresso : R$ "+ valorIngresso +"";
+        return "\nIngresso - Código : " + codigo + "\nEvento : " + evento.getNomeEvento() + "\nData : " + data + "\n Valor Ingresso : R$ "+ valorIngresso +"\n\n";
     }
 
     

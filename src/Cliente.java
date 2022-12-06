@@ -32,7 +32,7 @@ public class Cliente extends Pessoa{
 
     @Override
     public String toString() {
-        return getNome()+" - CPF : " + cpf + "\nmeusIngressos" + meusIngressos + "";
+        return getNome()+" - CPF : " + cpf + "\n" + meusIngressos + "";
     }
 
     
